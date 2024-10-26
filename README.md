@@ -22,15 +22,18 @@ Follow the instructions below to set up and run the project locally.
 src/
 │   └── main/
 │       ├── java/com/example/product/
-│       │   ├── controller/       # REST API controllers
-│       │   ├── model/            # JPA entity models
-│       │   ├── repository/       # JPA repositories
-│       │   └── config/           # Configuration classes (e.g., seeder, global exception handler)
+│       │   ├── config/
+│       │   ├── controller/
+│       │   ├── model/
+│       │   ├── repository/
+│       │   └── ProductApplication
 │       └── resources/
-│           └── application.properties   # Spring Boot properties file
+│           ├── static/
+│           ├── templates/
+│           └── application.properties
 └── test/
-└── java/com/example/product/controllerTest/   # Combined test for all controllers
-
+    └── java/com/example/product/
+        └── controllerTest/
 ## Setup Instructions
 
 1. **Clone the repository:**
@@ -66,51 +69,85 @@ This will execute the unit and integration tests for all the controllers (Produc
 
 ## API Endpoints
 
+
+
 Products
 
 	•	Get All Products (Paginated)
-	•	GET /api/products
+
+GET /api/products
+
 	•	Parameters: page (default=0), size (default=10)
 	•	Response: Paginated list of products
+
 	•	Get All Products (No Pagination)
-	•	GET /api/products/all
+
+GET /api/products/all
+
 	•	Response: List of all products
+
 	•	Get Product by ID
-	•	GET /api/products/{id}
+
+GET /api/products/{id}
+
 	•	Response: Product object or 404 if not found
+
 	•	Search Products by Name
-	•	GET /api/products/search?name=xyz
+
+GET /api/products/search?name=xyz
+
 	•	Response: List of products matching the search term
 
 Categories
 
 	•	Get All Categories (Paginated)
-	•	GET /api/category
+
+GET /api/category
+
 	•	Parameters: page, size
 	•	Response: Paginated list of categories
+
 	•	Get All Categories (No Pagination)
-	•	GET /api/category/all
+
+GET /api/category/all
+
 	•	Response: List of all categories
+
 	•	Get Category by ID
-	•	GET /api/category/{id}
+
+GET /api/category/{id}
+
 	•	Response: Category object or 404 if not found
+
 	•	Search Categories by Name
-	•	GET /api/category/search?name=xyz
+
+GET /api/category/search?name=xyz
+
 	•	Response: List of categories matching the search term
 
 Subcategories
 
 	•	Get All Subcategories (Paginated)
-	•	GET /api/subcategories
+
+GET /api/subcategories
+
 	•	Parameters: page, size
 	•	Response: Paginated list of subcategories
-	•	Get All Subcategories (No Pagination)
-	•	GET /api/subcategories/all
-	•	Response: List of all subcategories
-	•	Get Subcategory by ID
-	•	GET /api/subcategories/{id}
-	•	Response: Subcategory object or 404 if not found
-	•	Search Subcategories by Name
-	•	GET /api/subcategories/search?name=xyz
-	•	Response: List of subcategories matching the search term
 
+	•	Get All Subcategories (No Pagination)
+
+GET /api/subcategories/all
+
+	•	Response: List of all subcategories
+
+	•	Get Subcategory by ID
+
+GET /api/subcategories/{id}
+
+	•	Response: Subcategory object or 404 if not found
+
+	•	Search Subcategories by Name
+
+GET /api/subcategories/search?name=xyz
+
+	•	Response: List of subcategories matching the search term
