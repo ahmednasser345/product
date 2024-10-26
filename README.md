@@ -75,7 +75,7 @@ Products
 
 	•	Get All Products (Paginated)
 
-GET /api/products
+GET /api/products/alll
 
 	•	Parameters: page (default=0), size (default=10)
 	•	Response: Paginated list of products
