@@ -73,81 +73,83 @@ This will execute the unit and integration tests for all the controllers (Produc
 
 Products
 
-	•	Get All Products (Paginated)
+
 
 GET /api/products/alll
+	•	Get All Products (Paginated)
 
 	•	Parameters: page (default=0), size (default=10)
 	•	Response: Paginated list of products
 
-	•	Get All Products (No Pagination)
+	
 
 GET /api/products/all
-
+	•	Get All Products (No Pagination)
 	•	Response: List of all products
 
-	•	Get Product by ID
+	
 
 GET /api/products/{id}
-
+	•	Get Product by ID
 	•	Response: Product object or 404 if not found
 
-	•	Search Products by Name
+	
 
 GET /api/products/search?name=xyz
+	•	Search Products by Name
 
 	•	Response: List of products matching the search term
 
 Categories
 
+	
+
+GET /api/category/alll
 	•	Get All Categories (Paginated)
-
-GET /api/category
-
 	•	Parameters: page, size
 	•	Response: Paginated list of categories
 
-	•	Get All Categories (No Pagination)
+	
 
 GET /api/category/all
-
+	•	Get All Categories (No Pagination)
 	•	Response: List of all categories
 
-	•	Get Category by ID
+	
 
 GET /api/category/{id}
-
+	•	Get Category by ID
 	•	Response: Category object or 404 if not found
 
-	•	Search Categories by Name
+
 
 GET /api/category/search?name=xyz
-
+	•	Search Categories by Name
 	•	Response: List of categories matching the search term
 
 Subcategories
 
+	
+
+GET /api/subcategories/alll
 	•	Get All Subcategories (Paginated)
-
-GET /api/subcategories
-
 	•	Parameters: page, size
 	•	Response: Paginated list of subcategories
 
-	•	Get All Subcategories (No Pagination)
+	
 
 GET /api/subcategories/all
-
+	•	Get All Subcategories (No Pagination)
 	•	Response: List of all subcategories
 
-	•	Get Subcategory by ID
+	
 
 GET /api/subcategories/{id}
-
+	•	Get Subcategory by ID
 	•	Response: Subcategory object or 404 if not found
 
-	•	Search Subcategories by Name
+	
 
 GET /api/subcategories/search?name=xyz
-
+	•	Search Subcategories by Name
 	•	Response: List of subcategories matching the search term
